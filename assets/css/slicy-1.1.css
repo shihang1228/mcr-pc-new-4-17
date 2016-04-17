@@ -629,8 +629,8 @@ dl.sidebar{
 }
 
 
-.pager{ padding-top:5px; }
-.pager a{ padding:4px 10px; border: 1px solid #ddd; background: #fff; }
+.pager{ padding-top:20px;margin: 48px 0;text-align: center;}
+.pager a{display: inline-block;padding: 13px 20px;margin: 0 3px;border: 1px solid #f0f0f0;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;font-size: 20px;font-family: "微软雅黑";}
 .pager a:hover{ background: none repeat scroll 0 0 #0099FF; border-color: #0099FF; color: #FFFFFF; }
 .pager a.selected{ background:none; border:none; }
 
@@ -868,7 +868,7 @@ filter:alpha(opacity=80); -moz-opacity:0.8;/** Firefox 3.5即将原生支持opac
 	max-width:100%;
 }*/
 
-.current{ border: 1px solid #E5E5E5; padding:5px 10px; clear:both; height:auto; overflow:hidden; text-align:right; position:relative;}
+.current{ border: 1px solid #E5E5E5; padding:5px 10px; clear:both; height:auto; overflow:hidden; text-align:left; position:relative;}
 .current dt{
 	position:absolute; left:10px; top:5px;
 }

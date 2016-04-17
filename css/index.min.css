@@ -102,15 +102,24 @@ span.icon-new { width: 24px; height: 24px; border-radius: 50%; font-size: 14px; 
 .content .con-list{width:1200px;height:884px;margin:-70px auto 0 auto;box-shadow: 0px 0px 20px 1px #ccc;}
 .con-list .arrivelist{margin-left: 0px;position: relative;background: #fff;}
 .con-list .arrivelist .arr-left{width:220px;height:457px;margin-left:0;margin-top: 176px;box-shadow: 0px 0px 3px 1px #ccc;}
-.con-list .arrivelist .arr-right{width:960px;height:457px;}
+.con-list .arrivelist .arr-right{width:960px;}
 .taber.goodtaber .head{width:842px;height:60px;border-radius: 30px;margin:47px auto 60px auto;text-align: center;box-shadow: 0px 0px 16px 0px #ccc;  border: 1px solid #ccc;}
 .taber.goodtaber .head a{display: block;width:420px;height:60px;padding:0;border: 0;line-height: 60px;font-family: "微软雅黑";letter-spacing: 1px;font-size: 20px;}
 .taber.goodtaber .head .head-left{border-radius:30px 0 0 30px;}
 .taber.goodtaber .head .head-right{border-radius: 0 30px 30px 0;}
 .positionul{border-top: 1px dashed #d2d2d2;}
-.positionul li{height: 75px;line-height: 75px;border-bottom: 1px dashed #d2d2d2;font-size: 20px;font-family: "微软雅黑";color: #535353}
-.positionul li .spec{color:#4c4c4c;}
+.positionul li{height: 75px;line-height: 75px;border-bottom: 1px dashed #d2d2d2;font-size: 18px;font-family: "微软雅黑";color: #535353}
+.spec{color:#4c4c4c;}
+.spec2{color:#ee6d17;}
 .positionul li i.iconfont{font-size: 30px;}
 i.iconfont.icon-save{margin-right: 37px;}
 i.iconfont.icon-save:hover{color:#f8540c;}
 i.iconfont.icon-look:hover{color:#145bd0;}
+
+.leftnav-pic{text-align: center;margin: 32px auto;}
+.leftnav-cont{text-align: left;margin-left: 0;}
+.leftnav-cont li a{height:60px;display: block;line-height: 60px;font-size: 20px;font-family: "微软雅黑";color: #5a5b5b;padding-left: 42px;}
+.leftnav-cont li a:hover{background: #145bd0;color:#fff;}
+
+
+
