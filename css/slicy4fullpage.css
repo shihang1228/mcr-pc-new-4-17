@@ -1,0 +1,71 @@
+@charset "utf-8";
+/*!
+ * 切图Slicy4Fullpage Slicy4Fullpage v1.0
+ *
+ * Copyright 2014 Qietu.com, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+ 
+
+
+.Slicy4FullpageNav {
+	position: fixed;
+	_position: absolute;
+	_display: none;
+	z-index: 999;
+	right: 42px;
+	top: 50%;
+	margin-top: -52px;
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.Slicy4FullpageNav li {
+	margin-top: 6px;
+}
+.Slicy4FullpageNav li:first-child {
+	margin-top: 0;
+}
+.Slicy4FullpageNav li a {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border:#333 solid 1px;
+	border-radius:100%;
+}
+li.Slicy4FullpageNavCurr a {
+star:expression(this.onFocus=this.blur());
+	background:#333;
+}
+.Slicy4FullpageNav li.hide {
+	display:none;
+}
+.Slicy4FullpagePage {
+	overflow:hidden;
+	border-bottom: 1px solid #e5e5e5;
+	position:relative;
+}
+.Slicy4FullpagePage img {
+	width:100%;
+}
+.Slicy4FullpageArrow, .Slicy4FullpageArrowBlack {
+	background:url(../imgs/arrow.png) no-repeat;
+	width:13px;
+	height:48px;
+	position:absolute;
+	left:50%;
+	margin-left:-6px;
+	bottom:20px;
+	transition: all 0.3s ease-in-out 0s;
+	opacity:0;
+	-webkit-animation: bounce-up 1.4s linear infinite;
+	animation: bounce-up 1.4s linear infinite;
+}
+.Slicy4FullpageArrowBlack {
+	background:url(../imgs/arrow_black.png) no-repeat;
+}
+.active .Slicy4FullpageArrow, .active .Slicy4FullpageArrowBlack {
+	opacity:1;
+}
