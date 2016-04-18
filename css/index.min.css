@@ -120,6 +120,13 @@ i.iconfont.icon-look:hover{color:#145bd0;}
 .leftnav-cont{text-align: left;margin-left: 0;}
 .leftnav-cont li a{height:60px;display: block;line-height: 60px;font-size: 20px;font-family: "微软雅黑";color: #5a5b5b;padding-left: 42px;}
 .leftnav-cont li a:hover{background: #145bd0;color:#fff;}
+/*求购市场公用*/
+.content{background: #f5f5f5;}
+.content .buy-list{width:1200px;margin:0 auto;}
+.buy-list .current{height:80px;line-height: 80px;font-size: 15px;font-family: "微软雅黑";border:0;}
+.newbuy-item{width:292px;height:170px;margin:0;background:#fff;}
+.new-2{margin:0 10px;}
+.new-3{margin-right:12px;}
 
 
 
