@@ -121,12 +121,39 @@ i.iconfont.icon-look:hover{color:#145bd0;}
 .leftnav-cont li a{height:60px;display: block;line-height: 60px;font-size: 20px;font-family: "微软雅黑";color: #5a5b5b;padding-left: 42px;}
 .leftnav-cont li a:hover{background: #145bd0;color:#fff;}
 /*求购市场公用*/
+.buytitle{height:80px;line-height: 80px;font-family: "微软雅黑"}
 .content{background: #f5f5f5;}
 .content .buy-list{width:1200px;margin:0 auto;}
-.buy-list .current{height:80px;line-height: 80px;font-size: 15px;font-family: "微软雅黑";border:0;}
+.current{height:80px;line-height: 80px;font-size: 15px;font-family: "微软雅黑";border:0;}
 .newbuy-item{width:292px;height:170px;margin:0;background:#fff;}
 .new-2{margin:0 10px;}
 .new-3{margin-right:12px;}
+/*筛选条件*/
+.curr-wrap{width:1200px;margin:0 auto;}
+.searchbg{width:100%;background: url("../imgs/images/background1.png") no-repeat; -moz-background-size: 100% 100%; -o-background-size: 100% 100%; -webkit-background-size: 100% 100%; background-size: 100% 100%; background-repeat: no-repeat\9; background-image: none\9; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../imgs/images/background1.png', sizingMethod='scale')\9;margin-bottom: 10px;}
+.searchpic{margin-bottom: 25px;}
+.searchlist{width:1200px;margin:0 auto;padding-top: 25px;padding-bottom: 10px;}
+.searchlist dl{width: 1094px;overflow: hidden;padding: 6px 0 6px 6px;position:relative;}
+.searchlist dl dt{float: left;text-align: left;width: 75px;line-height: 32px;font-size: 14px;
+  font-family: "微软雅黑";}
+.searchlist dl dd{overflow: hidden;width: 910px;float: left;}
+.searchlist dl dd .dd_input{text-indent: 1em;outline: none;width: 150px;height: 24px;border: 1px solid #ccc;border-radius: 4px;margin-left: 22px;}
+.searchlist dl dd .dd_input:focus{border-color: #66afe9;outline: 0;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);}
+
+.searchlist dl dd a{float: left;height: 22px;line-height: 22px;margin: 4px 0;display: inline-block;padding: 0px 16px;white-space: nowrap;color: #005aa0;font-size: 14px;border-radius: 11px;text-align: center;font-family: "微软雅黑";font-size: 14px;}
+.searchlist dl .more{color: rgb(255, 0, 0);position:absolute;top:7px;right:33px;}
+.searchlist dl .more i{font-size:9px;margin-left:5px;color:rgb(255, 0, 0);}
+
+.select-no{color:#999}
+.searchlist dl dd a.selected{color:#fff;background-color:#0d3c89;margin-right: 10px;}
+
+.select-result{width: 1200px;margin: 35px auto 40px auto;height:40px;line-height: 40px;}
+.select-result dt{float:left;font-family: "微软雅黑";font-size: 18px;}
+
+.select-result dd a.selected{font-size: 12px;border-radius: 12px;color: #fff;margin-right: 15px;padding: 3px 28px 4px 14px;background: #0d3c89 url("../imgs/images/close.gif") right 9px no-repeat;font-family: "微软雅黑";}
+dl.select-result a.selected:first-child{margin-left:10px;}
+dl.select-result a.selected:hover{background-position:right -15px;color:#fff;}
+/*筛选条件*/
 
 
 

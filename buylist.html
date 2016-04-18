@@ -18,7 +18,6 @@
 <style>
 /*求购列表*/
 body{background: #f5f5f5;}
-.buytitle{height:80px;line-height: 80px;font-family: "微软雅黑"}
 .newbuy .newbuy-list{margin-left:0;}
 
 .newbuy-item .new-param{margin:0;color:#b6b6b6;font-family: "微软雅黑"}
@@ -77,17 +76,110 @@ body{background: #f5f5f5;}
 <div class="clear"></div>
 <!--中心区内容 start-->
 <div class="content">
-    <div class="buy-list">
-        <!--面包屑 start-->
+    <!--面包屑 start-->
+    <div class="curr-wrap">
         <div class="current">
             <a href="#"><i class="iconfont">&#x3702;</i></a>&gt; 
             <a href="#">供应</a>&gt;
             <span>求购列表</span>
         </div>
-        <!--面包屑 end-->
-        <!--筛选条件 start-->
-        <!--筛选条件 end-->
-
+    </div>
+    <!--面包屑 end-->
+    <!--筛选条件 start-->
+    <div class="searchbg">
+        <div class="searchlist">
+            <div class="searchpic">
+                <img src="imgs/images/tab-all.png" alt="" />
+            </div>
+            <dl id="select1">
+                <dt>货种：</dt>
+                <dd>
+                    <a href="#" class="select-all selected">全部</a>
+                    <a href="#">原木</a>
+                    <a href="#">条子</a>
+                    <a href="#">口料</a>
+                    <a href="#">大方</a>
+                    <a href="#">大板</a>
+                    <a href="#">防腐材</a>
+                    <a href="#">其他</a>
+                </dd>
+            </dl>
+            <dl id="select2">
+                <dt>树种：</dt>
+                <dd>
+                    <a href="#" class="select-all selected">全部</a>
+                    <a href="#">樟子松</a>
+                    <a href="#">落叶松</a>
+                    <a href="#">鱼鳞松</a>
+                    <a href="#">臭白</a>
+                    <a href="#">红松</a>
+                    <a href="#">白桦</a>
+                    <a href="#">红桦</a>
+                    <a href="#">水曲柳</a>
+                    <a href="#">柞木</a>
+                    <a href="#">杨木</a>
+                    <a href="#">其他</a>
+                </dd>
+            </dl>
+            <dl id="select3">
+                <dt>长度：</dt>
+                <dd>
+                    <a href="#" class="select-all selected">全部</a>
+                    <a href="#">2米</a>
+                    <a href="#">2.5米</a>
+                    <a href="#">3米</a>
+                    <a href="#">4米</a>
+                    <a href="#">6米</a>
+                    <a href="#">12米</a>
+                    <a href="#">8米</a>
+                </dd>
+            </dl>
+            <dl id="select5">
+                <dt>时间：</dt>
+                <dd>
+                    <a href="#" class="select-all selected">全部</a>
+                    <a href="#">1天以内</a>
+                    <a href="#">3天以内</a>
+                    <a href="#">5天以内</a>
+                    <a href="#">7天以内</a>
+                </dd>
+            </dl>
+            <dl class="dl_1 hide">
+                <dt>径级：</dt>
+                <dd>
+                    <input type="text" class="dd_input">
+                </dd>
+            </dl>
+            <dl class="dl_1 hide" id="select4">
+                <dt>材质：</dt>
+                <dd>
+                    <a href="#" class="select-all selected">全部</a>
+                    <a href="#">选材</a>
+                    <a href="#">一级材</a>
+                    <a href="#">二级材</a>
+                    <a href="#">加工材</a>
+                </dd>
+            </dl>
+            <dl class="dl_2 hide">
+                <dt>宽度：</dt>
+                <dd>
+                    <input type="text" class="dd_input">
+                </dd>
+            </dl>
+            <dl class="dl_2 hide">
+                <dt>厚度：</dt>
+                <dd>
+                    <input type="text" class="dd_input">
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <dl class="select-result">
+        <dt>已选条件：</dt>
+        <dd class="select-no"></dd>
+    </dl>
+    <!--筛选条件 end-->
+    <div class="buy-list">
         <!--最新求购 start-->
         <div class="newbuy">
             <h2 class="buytitle">最新求购 Up To Date</h2>
@@ -299,5 +391,6 @@ body{background: #f5f5f5;}
 <script src="js/scrollify.min.js" ></script>
 <!-- <script src="js/slicy4fullpage.js" ></script> -->
 <script src="js/docs.js" ></script>
+<script src="js/filter.js" ></script>
 </body>
 </html>
