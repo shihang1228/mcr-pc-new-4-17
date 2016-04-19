@@ -1,152 +1,39 @@
 
-$(document).ready(function(){
-
-    $("#select1 dd a").click(function (event) {
+$(function(){
+    /*===========筛选条件a链接的点击事件封装==============*/
+    $(".filterdl dd a").on("click",function(event){
         event.preventDefault();
-        $(this).addClass("selected").siblings().removeClass("selected");
+        var filterdl_index = $(this).closest(".filterdl").index();//获取父级dl的索引index
+        /*给所选中的a标签添加父级索引并且添加class selected*/
+        $(this).data("index",filterdl_index).addClass("selected").siblings().removeClass("selected");
+        /*如果所选a标签为“全部”的话，则在所选结果处要删除所选标签*/
         if ($(this).hasClass("select-all")) {
-            $(".dl_2").hide();
-            $(".dl_1").hide();
-            $(".select-result dd #selectD").remove();
-            $("#select4 dd a[class='select-all']").addClass("selected").siblings().removeClass("selected");
-            $("#selectA").remove();
-        } else {
-            var copyThisA = $(this).clone();
-            var kindid = copyThisA.text();
-            if(copyThisA.text() == "原木") {
-                $(".dl_2").hide();
-                $(".dl_1").show();
-
-
-                // $.ajax({
-                //     type: "get",
-                //     dataType: "json",
-                //     url: "spot?kindid="+kindid,
-                //     //async:false, //是否异步
-                //     complete :function(){ }, //AJAX请求完成时
-                //     success: function(data){
-                //        ajax_page(data);
-                //     },
-                //     error:function(){
-                //         alert("失败");
-                //     }
-                // })
-
-            }else{
-                $(".dl_1").hide();
-                $(".dl_2").show();
-                $(".select-result dd #selectD").remove();
-                $("#select4 dd a[class='select-all']").addClass("selected").siblings().removeClass("selected");
-            }
-            if ($("#selectA").length > 0) {
-                $("#selectA").html($(this).text());
-            } else {
-                $(".select-result dd").append(copyThisA.attr("id", "selectA"));
-            }
-        }
-    });
-
-    $("#select2 dd a").click(function (event) {
-        event.preventDefault();
-        $(this).addClass("selected").siblings().removeClass("selected");
-        if ($(this).hasClass("select-all")) {
-            $("#selectB").remove();
-        } else {
-            var copyThisB = $(this).clone();
-            if ($("#selectB").length > 0) {
-                $("#selectB").html($(this).text());
-            } else {
-                $(".select-result dd").append(copyThisB.attr("id", "selectB"));
-            }
-        }
-    });
-    
-    $("#select3 dd a").click(function (event) {
-        event.preventDefault();
-        $(this).addClass("selected").siblings().removeClass("selected");
-        if ($(this).hasClass("select-all")) {
-            $("#selectC").remove();
+            //$("#selectE").remove();
+            $(".select-no a.selectitem"+filterdl_index).remove();
+        /*如果所选a标签不是“全部”的话，则需要克隆一个，然后添加到所选条件的结果中*/
         } else {
             var copyThisC = $(this).clone();
-            if ($("#selectC").length > 0) {
-                $("#selectC").html($(this).text());
+            /*如果所选条件结果集中含有本类标签，则只替换文字*/
+            if ($(".selectitem"+filterdl_index).length > 0) {
+                $(".selectitem"+filterdl_index).html($(this).text());
             } else {
-                $(".select-result dd").append(copyThisC.attr("id", "selectC"));
+                $(".select-result dd").append(copyThisC.addClass("selectitem"+filterdl_index).data("index",filterdl_index));
             }
         }
-    });
-
-    $("#select4 dd a").click(function (event) {
+    })
+    /*点击所选条件结果集中的a标签，执行的操作是删除本按钮，并且把对应的类的全部添加选中*/
+    $("body").on("click", ".select-no .selected",function (event) {
         event.preventDefault();
-        $(this).addClass("selected").siblings().removeClass("selected");
-        if ($(this).hasClass("select-all")) {
-            $("#selectD").remove();
-        } else {
-            var copyThisC = $(this).clone();
-            if ($("#selectD").length > 0) {
-                $("#selectD").html($(this).text());
-            } else {
-                $(".select-result dd").append(copyThisC.attr("id", "selectD"));
-            }
+        var data_index = $(this).data("index")-1;
+        if($(this).hasClass("select-all")){
+            return;
+        }else{
+            $(this).remove();
+            $(".filterdl").eq(data_index).find(".select-all").addClass("selected").siblings().removeClass("selected");
         }
+        
     });
-
-    $("#select5 dd a").click(function (event) {
-        event.preventDefault();
-        $(this).addClass("selected").siblings().removeClass("selected");
-        if ($(this).hasClass("select-all")) {
-            $("#selectE").remove();
-        } else {
-            var copyThisC = $(this).clone();
-            if ($("#selectE").length > 0) {
-                $("#selectE").html($(this).text());
-            } else {
-                $(".select-result dd").append(copyThisC.attr("id", "selectE"));
-            }
-        }
-    });
-    
-    $("body").on("click", "#selectA",function (event) {
-        event.preventDefault();
-        $(this).remove();
-        $("#selectD").remove();
-        $(".dl_1").hide();
-        $(".dl_2").hide();
-        $("#select4 dd a[class='select-all']").addClass("selected").siblings().removeClass("selected");
-        $("#select1 .select-all").addClass("selected").siblings().removeClass("selected");
-    });
-    
-    $("body").on("click", "#selectB",function (event) {
-        event.preventDefault();
-        $(this).remove();
-        $("#select2 .select-all").addClass("selected").siblings().removeClass("selected");
-    });
-    
-    $("body").on("click", "#selectC",function (event) {
-        event.preventDefault();
-        $(this).remove();
-        $("#select3 .select-all").addClass("selected").siblings().removeClass("selected");
-    });
-
-    $("body").on("click", "#selectD",function (event) {
-        event.preventDefault();
-        $(this).remove();
-        $("#select4 .select-all").addClass("selected").siblings().removeClass("selected");
-    });
-    
-    $("body").on("click", "#selectE",function (event) {
-        event.preventDefault();
-        $(this).remove();
-        $("#select5 .select-all").addClass("selected").siblings().removeClass("selected");
-    });
-
-    $(".select dd").on("click", function () {
-        if ($(".select-result dd").length > 1) {
-            $(".select-no").hide();
-        } else {
-            $(".select-no").show();
-        }
-    });
+    /*===========筛选条件a链接的点击事件封装==============*/
     
 });
 
